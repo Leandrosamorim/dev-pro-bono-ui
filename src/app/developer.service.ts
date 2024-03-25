@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Developer, UpdateDeveloperCommand } from './models/developer';
@@ -19,5 +19,9 @@ export class DeveloperService {
 
   updateProfile(developer : UpdateDeveloperCommand) : Observable<any>{
     return this.http.put(this.developerUrl, developer)
+  }
+
+  getDevelopers(stackId : number) :  Observable<any>{
+    return this.http.get(this.developerUrl + '?stackId=' + stackId);
   }
 }

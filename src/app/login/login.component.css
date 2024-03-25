@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    overflow: hidden;
+  }
+  
+  .switch input {
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2196F3;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    left: 82%;
+  }
+  input:checked + .slider:before + .text-right {
+    opacity: 1;
+  }
+  
+  .text-left,
+  .text-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  
+  /* Show the left text when the slider is on the left side */
+  .switch input:not(:checked) + .slider + .text-left {
+    opacity: 1;
+  }
+  
+  /* Show the right text when the slider is on the right side */
+  .switch input:checked + .slider + .text-right {
+    opacity: 1;
+  }
+
+  div.register a{
+    display: block;
+    margin: 10px;
+  }

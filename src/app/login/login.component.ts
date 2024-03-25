@@ -19,27 +19,57 @@ import { AppComponent } from '../app.component';
 export class LoginComponent {
   username : string;
   password : string;
+  organization = 0;
 
   constructor(private authService : AuthService, private router : Router, private appComponent : AppComponent) {  }
 
+  onClick(){
+
+    if (this.organization === 0){
+      this.organization = 1;
+    }else{
+      this.organization = 0;
+    }
+  }
   onSubmit(form: NgForm){
     this.username = form.value.username;
     this.password = form.value.password;
 
-    this.authService.login(this.username, this.password).subscribe(
-      (response) => {
-        localStorage.setItem("jwt", response);
-        this.router.navigate(['/matches']);
-        this.appComponent.isLoggedIn = true;
-      },
-      (error) => {
-        console.log('Wrong credentials');
-      }
-     );
+    if (this.organization === 0){
+      this.authService.login(this.username, this.password).subscribe(
+        (response) => {
+          localStorage.setItem("jwt", response);
+          this.router.navigate(['/matches']);
+          this.appComponent.isLoggedIn = true;
+          this.appComponent.organization = this.organization;
+        },
+        (error) => {
+          console.log('Wrong credentials');
+          alert('Login failed');
+        }
+       );
+    }else{
+      this.authService.loginOrganization(this.username, this.password).subscribe(
+        (response) => {
+          localStorage.setItem("jwt", response);
+          this.router.navigate(['/matches']);
+          this.appComponent.isLoggedIn = true;
+          this.appComponent.organization = this.organization;
+        },
+        (error) => {
+          console.log('Wrong credentials');
+        }
+       );
+    }
+    
   }
 
   redirectToRegister():void{
     this.router.navigate(['/register'])
+  }
+
+  redirectToRegisterOrganization():void{
+    this.router.navigate(['/registerOrganization'])
   }
    
 

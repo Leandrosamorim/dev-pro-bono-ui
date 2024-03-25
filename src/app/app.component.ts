@@ -13,6 +13,7 @@ export class AppComponent {
   title = 'dev-pro-bem-ui';
 
   isLoggedIn = false;
+  organization = 0;
 
   constructor(private router : Router) {  }
 
@@ -34,5 +35,20 @@ export class AppComponent {
 
   redirectToMatch():void{
     this.router.navigate(['/matches'])
+  }
+  redirectToOrganizationProfile():void{
+    this.router.navigate(['/organizationProfile'])
+  }
+  redirectToDevelopers():void{
+    this.router.navigate(['/developers'])
+  }
+  redirectToOrganizationProjects():void{
+    this.router.navigate(['/organizationProjects'])
+  }
+
+  logout():void{
+    this.isLoggedIn = false;
+    localStorage.setItem("jwt", '');
+    this.router.navigate([''])
   }
 }

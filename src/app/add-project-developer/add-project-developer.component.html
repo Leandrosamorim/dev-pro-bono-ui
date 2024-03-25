@@ -1,12 +1,12 @@
 <div class="container">
-    <h2>Meus Matches</h2>
+    <h2>Devs</h2>
     <div class="card-container">
-      <div class="card" *ngFor="let item of items">
+      <div class="card" *ngFor="let item of items" (click)="addProjectDeveloper(item.uId)">
         <div class="card-header">
           <h3>{{ item.name }}</h3>
         </div>
         <div class="card-body">
-          <p>{{ item.description }}</p>
+          <p>{{ item.stackName }}</p>
           <p>{{ item.contact.phone }}</p>
           <p>{{ item.contact.email }}</p>
         </div>

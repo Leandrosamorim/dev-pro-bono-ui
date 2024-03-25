@@ -1,7 +1,7 @@
 <style>
   main {
     width: 100%;
-    min-height: 100%;
+    min-height: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,10 +29,14 @@
 <main class="main">
     <div class="content">
       <a *ngIf="!isLoggedIn" (click)="redirectToLogin()">Login</a>
-      <a *ngIf="!isLoggedIn" (click)="redirectToRegister()">Register</a>
-      <a *ngIf="isLoggedIn" (click)="redirectToProfile()">Perfil</a>
-      <a *ngIf="isLoggedIn" (click)="redirectToOrganization()">ONGs</a>
-      <a *ngIf="isLoggedIn" (click)="redirectToMatch()">Minhas ONGs</a>
+      <a *ngIf="isLoggedIn && organization == 0" (click)="redirectToProfile()">Perfil</a>
+      <a *ngIf="isLoggedIn && organization == 0" (click)="redirectToOrganization()">ONGs</a>
+      <a *ngIf="isLoggedIn && organization == 0" (click)="redirectToMatch()">Minhas ONGs</a>
+      <a *ngIf="isLoggedIn && organization == 1" (click)="redirectToOrganizationProfile()">Perfil</a>
+      <a *ngIf="isLoggedIn && organization == 1" (click)="redirectToDevelopers()">Devs</a>
+      <a *ngIf="isLoggedIn && organization == 1" (click)="redirectToMatch()">Meus Devs</a>
+      <a *ngIf="isLoggedIn && organization == 1" (click)="redirectToOrganizationProjects()">Meus Projetos</a>
+      <a *ngIf="isLoggedIn" (click)="logout()">Logout</a>
     </div>
 
 </main>
