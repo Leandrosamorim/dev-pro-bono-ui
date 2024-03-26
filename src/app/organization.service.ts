@@ -21,7 +21,7 @@ export class OrganizationService {
     return this.http.get<Organization[]>(this.organizationUrl);
    }
  
-   updateProfile(organization : UpdateOrganizationCommand) : Observable<any>{
+  updateProfile(organization : UpdateOrganizationCommand) : Observable<any>{
      return this.http.put(this.organizationUrl, organization)
    }
 }

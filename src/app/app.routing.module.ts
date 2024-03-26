@@ -9,6 +9,7 @@ import { DevelopersComponent } from './developers/developers.component';
 import { OrganizationRegisterComponent } from './organization-register/organization-register.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { OrganizationProjectsComponent } from './organization-projects/organization-projects.component';
+import { DeveloperProjectsComponent } from './developer-projects/developer-projects.component';
 
 export const routes: Routes = [
     {path: '', component: WelcomeComponent},
@@ -20,5 +21,6 @@ export const routes: Routes = [
     {path: 'organizations', component: OrganizationsComponent},
     {path: 'organizationProfile', component: OrganizationProfileComponent},
     {path: 'developers', component: DevelopersComponent},
-    {path: 'organizationProjects', component: OrganizationProjectsComponent}
+    {path: 'organizationProjects', component: OrganizationProjectsComponent},
+    {path: 'developerProjects', component: DeveloperProjectsComponent}
 ];

@@ -32,6 +32,7 @@
       <a *ngIf="isLoggedIn && organization == 0" (click)="redirectToProfile()">Perfil</a>
       <a *ngIf="isLoggedIn && organization == 0" (click)="redirectToOrganization()">ONGs</a>
       <a *ngIf="isLoggedIn && organization == 0" (click)="redirectToMatch()">Minhas ONGs</a>
+      <a *ngIf="isLoggedIn && organization == 0" (click)="redirectToDeveloperProjects()">Meus projetos</a>
       <a *ngIf="isLoggedIn && organization == 1" (click)="redirectToOrganizationProfile()">Perfil</a>
       <a *ngIf="isLoggedIn && organization == 1" (click)="redirectToDevelopers()">Devs</a>
       <a *ngIf="isLoggedIn && organization == 1" (click)="redirectToMatch()">Meus Devs</a>

@@ -1,0 +1,20 @@
+<div>
+    <h2>Register Project</h2>
+    <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="item.name" required>
+      </div>
+      <div>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" [(ngModel)]="item.description" required></textarea>
+      </div>
+      <div>
+          <label for="status">Status:</label>
+        <select (change)="onOptionChange($event)" [(ngModel)]="item.status" name="status">
+            <option id="status" name="status" required *ngFor="let option of options"  [value]="option.id">{{ option.name }}</option>
+          </select><br><br>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>

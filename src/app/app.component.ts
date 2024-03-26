@@ -45,6 +45,9 @@ export class AppComponent {
   redirectToOrganizationProjects():void{
     this.router.navigate(['/organizationProjects'])
   }
+  redirectToDeveloperProjects():void{
+    this.router.navigate(['/developerProjects'])
+  }
 
   logout():void{
     this.isLoggedIn = false;
