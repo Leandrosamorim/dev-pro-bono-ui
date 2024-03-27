@@ -13,7 +13,7 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
   selector: 'app-developer-projects',
   standalone: true,
   imports: [StatusMappingPipe, CommonModule,FontAwesomeModule],
-  template: `<div class="container">
+  template: `<body><div class="container">
   <h2>Projects</h2>
   <div class="card-container">
     <div class="card" *ngFor="let item of items" >
@@ -27,7 +27,7 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
       </div>
     </div>
   </div>
-</div>`,
+</div></body>`,
   styleUrl: './developer-projects.component.css'
 })
 export class DeveloperProjectsComponent implements OnInit {

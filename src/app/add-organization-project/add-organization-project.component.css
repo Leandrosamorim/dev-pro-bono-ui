@@ -1,0 +1,63 @@
+/* Island theme CSS */
+
+/* Body */
+body {
+    background-color: rgba(135, 206, 235, 0.5);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Form container */
+  div {
+    background-color: #f0e68c; /* Light yellow color for the sand */
+    border-radius: 10px;
+
+    width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+  
+  /* Form title */
+  h2 {
+    text-align: center;
+    color: #ffffff; /* White color for the title */
+  }
+  
+  /* Form elements */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    color: #008080; /* Dark cyan color for labels */
+  }
+  
+  input[type="text"],
+  textarea,
+  select {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #008080; /* Dark cyan color for the button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #006060; /* Darker cyan color on hover */
+  }
+  

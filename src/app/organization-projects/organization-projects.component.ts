@@ -14,7 +14,7 @@ export interface DialogData {
   selector: 'app-organization-projects',
   standalone: true,
   imports: [CommonModule, StatusMappingPipe],
-  template: `<div class="container">
+  template: `<body><div class="container">
   <h2>Projects</h2>
   <button (click)="openAddProject(null)">Add Project</button>
   <div class="card-container">
@@ -28,7 +28,7 @@ export interface DialogData {
       </div>
     </div>
   </div>
-</div>`,
+</div></body>`,
   styleUrl: './organization-projects.component.css'
 })
 export class OrganizationProjectsComponent implements OnInit {
@@ -58,7 +58,7 @@ export class OrganizationProjectsComponent implements OnInit {
     openModal(projectId : string): void {
       const dialogRef = this.dialog.open(OrganizationProjectModalComponent, {
         data: {uId : projectId},
-        width: '1200px'
+        width: '800px'
       });
       dialogRef.afterClosed().subscribe((response) => {
         this.ngOnInit();
@@ -71,7 +71,7 @@ export class OrganizationProjectsComponent implements OnInit {
 
     openAddProject(projectId : string | null): void {
       const dialogRef = this.dialog.open(AddOrganizationProjectComponent, {
-        width: '1200px'
+        width: '800px'
       });
     }
 }

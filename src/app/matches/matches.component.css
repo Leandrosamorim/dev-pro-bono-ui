@@ -6,8 +6,10 @@ body, h1, h2, h3, p, ul, ol {
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #0077be; /* Deep blue for ocean */
+  background-color: #87CEEB; /* Sky Blue */
+  padding-top: 30px;
   color: #fff;
+  overflow:scroll
 }
 
 .container {

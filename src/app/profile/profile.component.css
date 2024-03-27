@@ -2,12 +2,14 @@
 body, h1, h2, h3, p, ul, ol {
   margin: 0;
   padding: 0;
+  
 }
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #0077be; /* Deep blue for ocean */
-  color: #fff;
+  padding-top: 30px;
+  background-color: #87CEEB; /* Sky Blue */
+  color: #05001e;
 }
 
 .container {
