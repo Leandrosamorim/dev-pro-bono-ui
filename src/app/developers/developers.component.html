@@ -1,4 +1,5 @@
-<div class="container">
+<body>
+  <div class="container">
     <h2>Developers</h2>
     <select (change)="onOptionChange($event)">
         <option *ngFor="let option of options" [value]="option.id">{{ option.name }}</option>
@@ -15,3 +16,4 @@
       </div>
     </div>
   </div>
+</body>

@@ -6,8 +6,9 @@ body, h1, h2, h3, p, ul, ol {
   
   body {
     font-family: 'Arial', sans-serif;
+    padding-top: 30px;
     background-color: #87CEEB; /* Sky Blue */
-    color: #fff;
+    color: #05001e;
   }
   
   .container {
